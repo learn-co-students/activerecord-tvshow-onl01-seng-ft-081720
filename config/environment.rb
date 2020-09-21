@@ -1,6 +1,9 @@
 require "bundler/setup"
 require 'yaml'
 require 'active_record'
+# require_relative '../db/migrate/001_create_shows.rb'
+# require_relative '../db/migrate/002_add_season_to_shows.rb'
+# require_relative '../app/models/show.rb'
 
 Bundler.require
 
@@ -15,3 +18,6 @@ DB = ActiveRecord::Base.establish_connection({
 if ENV["ACTIVE_RECORD_ENV"] == "test"
   ActiveRecord::Migration.verbose = false
 end
+
+
+# require_all 'app'
